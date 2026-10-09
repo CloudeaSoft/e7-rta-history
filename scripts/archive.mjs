@@ -1,4 +1,4 @@
-import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { setTimeout as sleep } from 'node:timers/promises';
@@ -46,46 +46,69 @@ export async function fetchResponse(url = ENDPOINT, {
   throw new Error('No fetch attempts configured');
 }
 
-export async function archiveResponse(raw, { dataDir, now = new Date() }) {
-  const response = JSON.parse(raw.toString('utf8'));
+function parseSnapshot(raw) {
+  const response = JSON.parse(raw.toString('utf8').replace(/^\uFEFF/, ''));
   if (response.code !== 0) throw new Error(`API error: ${response.code} ${response.message ?? ''}`);
   const body = response.value?.result_body;
   if (String(body?.nick_no) !== '199070445' || !Array.isArray(body?.battle_list)) {
     throw new Error('Unexpected response account or battle_list structure');
   }
-  // Validate every incoming record before writing any data.
   body.battle_list.forEach(recordKey);
-  const totalPath = join(dataDir, 'battles.json');
-  let existing;
-  try {
-    existing = JSON.parse(await readFile(totalPath, 'utf8'));
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-    existing = [];
-  }
-  if (!Array.isArray(existing)) throw new Error('battles.json must be an array');
-  const seen = new Set(existing.map(recordKey));
-  if (seen.size !== existing.length) throw new Error('Existing archive contains duplicate identities');
-  const additions = [];
-  for (const record of body.battle_list) {
-    const key = recordKey(record);
-    if (!seen.has(key)) { seen.add(key); additions.push(record); }
-  }
+  return body.battle_list;
+}
 
+export async function saveSnapshot(raw, { dataDir, now = new Date() }) {
   const timestamp = now.toISOString();
   const snapshotDir = join(dataDir, 'snapshots', timestamp.slice(0, 10));
   const snapshot = join(snapshotDir, `${timestamp.replaceAll(':', '-')}-${randomUUID()}.json`);
   await mkdir(snapshotDir, { recursive: true });
   // Never reformat or overwrite a raw response, including repeated responses.
   await writeFile(snapshot, raw, { flag: 'wx' });
+  return { snapshot, bytes: raw.length };
+}
+
+async function listSnapshots(directory, prefix = '') {
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const relativePath = prefix + entry.name;
+    if (entry.isDirectory()) {
+      files.push(...await listSnapshots(join(directory, entry.name), relativePath + '/'));
+    } else if (entry.isFile() && /\.(json|txt)$/i.test(entry.name)) {
+      files.push(relativePath);
+    }
+  }
+  return files;
+}
+
+export async function rebuildArchive({ dataDir }) {
+  const snapshotDir = join(dataDir, 'snapshots');
+  // ISO date paths sort chronologically. Never depend on filesystem enumeration order.
+  const files = (await listSnapshots(snapshotDir)).sort();
+  if (files.length === 0) throw new Error('No snapshots found; refusing to replace aggregate');
+  const records = new Map();
+  let recordsRead = 0;
+  for (const file of files) {
+    try {
+      const battles = parseSnapshot(await readFile(join(snapshotDir, file)));
+      recordsRead += battles.length;
+      for (const battle of battles) {
+        const key = recordKey(battle);
+        if (!records.has(key)) records.set(key, battle);
+      }
+    } catch (error) {
+      throw new Error(`Invalid snapshot ${file}: ${error.message}`, { cause: error });
+    }
+  }
+  // All snapshots must validate before replacing the derived output.
+  // The old aggregate is never an input, so missing/corrupt outputs can be rebuilt.
+  const totalPath = join(dataDir, 'battles.json');
   const temporary = `${totalPath}.${randomUUID()}.tmp`;
   try {
-    await writeFile(temporary, JSON.stringify([...existing, ...additions], null, 2) + '\n', { flag: 'wx' });
+    await writeFile(temporary, JSON.stringify([...records.values()], null, 2) + '\n', { flag: 'wx' });
     await rename(temporary, totalPath);
   } catch (error) {
     await rm(temporary, { force: true });
-    await rm(snapshot, { force: true });
     throw error;
   }
-  return { snapshot, received: body.battle_list.length, added: additions.length, total: seen.size };
+  return { snapshots: files.length, recordsRead, duplicates: recordsRead - records.size, total: records.size };
 }

@@ -32,8 +32,11 @@ jobs:
       - name: Test archive behavior
         run: npm test
 
-      - name: Fetch battles with POST and merge new records
+      - name: Fetch battles with POST and save raw snapshot
         run: npm run fetch
+
+      - name: Rebuild aggregate from all snapshots
+        run: npm run rebuild
 
       - name: Commit snapshot and aggregate together
         env:
@@ -58,3 +61,11 @@ jobs:
           done
           echo "Unable to push archive commit after three attempts." >&2
           exit 1
+
+      - name: Preserve snapshots if processing or push fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshots-${{ github.run_id }}-${{ github.run_attempt }}
+          path: data/snapshots/
+          retention-days: 14

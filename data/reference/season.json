@@ -1,0 +1,149 @@
+[
+  {
+    "startDate": "2026-08-08 00:00:00.0",
+    "endDate": "2099-12-31 00:00:00.0",
+    "season_code": "pvp_rta_ss21",
+    "name": "Fall 2026",
+    "is_now_season": 1
+  },
+  {
+    "startDate": "2026-04-04 00:00:00.0",
+    "endDate": "2026-07-11 00:00:00.0",
+    "season_code": "pvp_rta_ss20",
+    "name": "Summer 2026",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2025-12-13 00:00:00.0",
+    "endDate": "2026-03-07 00:00:00.0",
+    "season_code": "pvp_rta_ss19",
+    "name": "Spring 2026",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2025-08-30 00:00:00.0",
+    "endDate": "2025-11-15 00:00:00.0",
+    "season_code": "pvp_rta_ss18",
+    "name": "Fall 2025",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2025-05-03 00:00:00.0",
+    "endDate": "2025-08-02 00:00:00.0",
+    "season_code": "pvp_rta_ss17",
+    "name": "Summer 2025",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2025-01-11 00:00:00.0",
+    "endDate": "2025-04-05 00:00:00.0",
+    "season_code": "pvp_rta_ss16",
+    "name": "Spring 2025",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2024-09-28 00:00:00.0",
+    "endDate": "2024-12-14 00:00:00.0",
+    "season_code": "pvp_rta_ss15",
+    "name": "Pursuit Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2024-06-01 00:00:00.0",
+    "endDate": "2024-08-24 00:00:00.0",
+    "season_code": "pvp_rta_ss14",
+    "name": "Contention Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2024-02-03 00:00:00.0",
+    "endDate": "2024-05-04 00:00:00.0",
+    "season_code": "pvp_rta_ss13",
+    "name": "Oath Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2023-10-14 00:00:00.0",
+    "endDate": "2024-01-06 00:00:00.0",
+    "season_code": "pvp_rta_ss12",
+    "name": "Insight Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2023-06-24 00:00:00.0",
+    "endDate": "2023-09-16 00:00:00.0",
+    "season_code": "pvp_rta_ss11",
+    "name": "Valorous Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2023-03-04 00:00:00.0",
+    "endDate": "2023-05-27 00:00:00.0",
+    "season_code": "pvp_rta_ss10",
+    "name": "Indomitable Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2022-11-12 00:00:00.0",
+    "endDate": "2023-02-04 00:00:00.0",
+    "season_code": "pvp_rta_ss9",
+    "name": "Triumph Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2022-07-23 00:00:00.0",
+    "endDate": "2022-10-15 00:00:00.0",
+    "season_code": "pvp_rta_ss8",
+    "name": "Conquest Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2022-03-31 00:00:00.0",
+    "endDate": "2022-06-18 00:00:00.0",
+    "season_code": "pvp_rta_ss7",
+    "name": "Resolution Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2021-12-04 00:00:00.0",
+    "endDate": "2022-02-26 00:00:00.0",
+    "season_code": "pvp_rta_ss6",
+    "name": "Conviction Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2021-08-14 00:00:00.0",
+    "endDate": "2021-11-06 00:00:00.0",
+    "season_code": "pvp_rta_ss5",
+    "name": "Ambition Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2021-04-16 00:00:00.0",
+    "endDate": "2021-07-08 00:00:00.0",
+    "season_code": "pvp_rta_ss4",
+    "name": "Skyward Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2020-12-25 00:00:00.0",
+    "endDate": "2021-03-18 00:00:00.0",
+    "season_code": "pvp_rta_ss3",
+    "name": "Ardor Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2020-09-04 00:00:00.0",
+    "endDate": "2020-11-26 00:00:00.0",
+    "season_code": "pvp_rta_ss2",
+    "name": "Endeavor Season",
+    "is_now_season": 0
+  },
+  {
+    "startDate": "2020-04-16 00:00:00.0",
+    "endDate": "2020-07-09 00:00:00.0",
+    "season_code": "pvp_rta_ss1",
+    "name": "Showdown Season",
+    "is_now_season": 0
+  }
+]

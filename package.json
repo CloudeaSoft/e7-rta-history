@@ -7,7 +7,8 @@
   "engines": { "node": ">=24" },
   "scripts": {
     "fetch": "node scripts/fetch-battles.mjs",
-    "rebuild": "node scripts/rebuild-battles.mjs",
+    "rebuild": "node scripts/rebuild-battles.mjs && npm run analyze",
+    "analyze": "node scripts/generate-analysis.mjs",
     "archive": "npm run fetch && npm run rebuild",
     "test": "node --test"
   }

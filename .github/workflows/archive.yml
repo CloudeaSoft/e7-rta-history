@@ -35,16 +35,16 @@ jobs:
       - name: Fetch battles with POST and save raw snapshot
         run: npm run fetch
 
-      - name: Rebuild aggregate from all snapshots
+      - name: Rebuild aggregate and analysis from all snapshots
         run: npm run rebuild
 
-      - name: Commit snapshot and aggregate together
+      - name: Commit snapshot, aggregate and analysis together
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/snapshots data/battles.json
+          git add -- data/snapshots data/battles.json data/analysis.json
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0

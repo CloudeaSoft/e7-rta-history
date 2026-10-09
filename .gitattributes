@@ -1,3 +1,4 @@
 * text=auto eol=lf
 # Preserve raw HTTP response bodies without Git newline conversion.
 data/snapshots/** -text
+data/reference/** -text

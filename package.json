@@ -1,0 +1,12 @@
+{
+  "name": "e7-rta",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Daily Epic Seven RTA battle archive",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "fetch": "node scripts/fetch-battles.mjs",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,60 @@
+name: Archive E7 RTA battles
+
+on:
+  schedule:
+    # 14:00 UTC = 22:00 Asia/Singapore (UTC+8)
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: e7-rta-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Test archive behavior
+        run: npm test
+
+      - name: Fetch battles with POST and merge new records
+        run: npm run fetch
+
+      - name: Commit snapshot and aggregate together
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/snapshots data/battles.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(data): archive E7 RTA battles $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          # Rebase safely if unrelated commits reached the branch during the fetch.
+          # Conflicting archive edits fail visibly; never force-push or discard data.
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$DEFAULT_BRANCH"
+            if git push origin "HEAD:$DEFAULT_BRANCH"; then
+              exit 0
+            fi
+            sleep "$((attempt * 2))"
+          done
+          echo "Unable to push archive commit after three attempts." >&2
+          exit 1

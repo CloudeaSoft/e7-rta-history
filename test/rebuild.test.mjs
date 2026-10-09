@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import * as archive from '../scripts/archive.mjs';
 
 const battle = (seq, extra = {}) => ({ worldCode: 'world_asia', nicknameno: 199070445,
-  season_code: 'pvp_rta_ss21', battle_seq: seq, ...extra });
+  season_code: 'pvp_rta_ss21', battle_seq: seq, battle_day: '2026-10-01 12:00:00.0', ...extra });
 const payload = records => Buffer.from(JSON.stringify({ code: 0, message: 'SUCCESS',
   value: { result_body: { nick_no: 199070445, battle_list: records } } }));
 async function setup(t) {
@@ -85,4 +85,34 @@ test('missing or empty snapshot directory cannot silently erase an existing aggr
   await mkdir(join(dataDir, 'snapshots'));
   await assert.rejects(archive.rebuildArchive({ dataDir }), /No snapshots/);
   assert.equal(await readFile(join(dataDir, 'battles.json'), 'utf8'), '[{"existing":true}]');
+});
+
+test('sorts by battle time then numeric sequence, preserving earliest snapshot version', async t => {
+  const dataDir = await setup(t);
+  await snapshot(dataDir, '2026-09-28.txt', payload([
+    battle('9007199254740993', { battle_day: '2026-10-02 00:00:00.0' }),
+    battle('10', { iswin: 1 }), battle('2'),
+    battle('100', { battle_day: '2026-09-30 23:59:59.0' }),
+    battle('9007199254740992', { battle_day: '2026-10-02 00:00:00.00' }),
+  ]));
+  await snapshot(dataDir, '2026-10-09.json', payload([battle('10', { iswin: 2 })]));
+  await archive.rebuildArchive({ dataDir });
+  const rows = JSON.parse(await readFile(join(dataDir, 'battles.json')));
+  assert.deepEqual(rows.map(r => r.battle_seq), ['100', '2', '10', '9007199254740992', '9007199254740993']);
+  assert.equal(rows.find(r => r.battle_seq === '10').iswin, 1);
+  const before = await readFile(join(dataDir, 'battles.json'));
+  await archive.rebuildArchive({ dataDir });
+  assert.deepEqual(await readFile(join(dataDir, 'battles.json')), before);
+});
+
+test('invalid sorting fields fail without replacing the aggregate', async t => {
+  const dataDir = await setup(t);
+  await snapshot(dataDir, 'good.json', payload([battle('1')]));
+  await archive.rebuildArchive({ dataDir });
+  const before = await readFile(join(dataDir, 'battles.json'));
+  for (const record of [battle('2', { battle_day: null }), battle('3', { battle_day: 'unknown' }), battle('abc')]) {
+    await snapshot(dataDir, 'bad.json', payload([record]));
+    await assert.rejects(archive.rebuildArchive({ dataDir }), /bad.json/);
+    assert.deepEqual(await readFile(join(dataDir, 'battles.json')), before);
+  }
 });

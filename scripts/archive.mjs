@@ -19,7 +19,27 @@ function recordKey(record) {
   if (record.worldCode !== 'world_asia' || String(record.nicknameno) !== '199070445') {
     throw new Error('Unexpected battle account or world');
   }
+  if (!/^\d+$/.test(String(record.battle_seq))) throw new Error('Invalid numeric battle_seq');
+  if (typeof record.battle_day !== 'string' ||
+      !/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(?:\.\d+)?$/.test(record.battle_day)) {
+    throw new Error('Invalid battle_day timestamp');
+  }
   return JSON.stringify([record.worldCode, String(record.nicknameno), record.season_code, String(record.battle_seq)]);
+}
+
+function compareBattles(a, b) {
+  // Compare the API's wall-clock fields directly, without guessing its timezone.
+  // Normalize only the comparison key: .0 and .00 denote the same time.
+  const timeKey = value => {
+    const [seconds, fraction = ''] = value.split('.');
+    return `${seconds}.${fraction.replace(/0+$/, '')}`;
+  };
+  const aTime = timeKey(a.battle_day);
+  const bTime = timeKey(b.battle_day);
+  if (aTime !== bTime) return aTime < bTime ? -1 : 1;
+  const aSequence = BigInt(a.battle_seq);
+  const bSequence = BigInt(b.battle_seq);
+  return aSequence < bSequence ? -1 : aSequence > bSequence ? 1 : 0;
 }
 
 export async function fetchResponse(url = ENDPOINT, {
@@ -104,7 +124,8 @@ export async function rebuildArchive({ dataDir }) {
   const totalPath = join(dataDir, 'battles.json');
   const temporary = `${totalPath}.${randomUUID()}.tmp`;
   try {
-    await writeFile(temporary, JSON.stringify([...records.values()], null, 2) + '\n', { flag: 'wx' });
+    const sorted = [...records.values()].sort(compareBattles);
+    await writeFile(temporary, JSON.stringify(sorted, null, 2) + '\n', { flag: 'wx' });
     await rename(temporary, totalPath);
   } catch (error) {
     await rm(temporary, { force: true });

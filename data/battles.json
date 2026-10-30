@@ -18127,5 +18127,103 @@
     },
     "opening_rule_title": "rta_openingrule_category_6",
     "opening_rule_desc_tid": "rta_cs_dodge_down_desc"
+  },
+  {
+    "langCode": "en",
+    "battleCompletedate": "2026-10-29 23:49:06.0",
+    "teamBettleInfoenemy": "\"my_team\":[]",
+    "teamBettleInfo": "\"my_team\":[]",
+    "prebanListEnemy": "\"preban_list\":[\"c2124\",\"c2185\"]",
+    "prebanList": "\"preban_list\":[\"c2185\",\"c2181\"]",
+    "energyGauge": "\"energy_gauge\":[]",
+    "regDate": "2026-10-30 10:12:34.0",
+    "matchPlayerNicknameno": 312098171,
+    "winScore": 2300,
+    "updownTypeWinscore": 1,
+    "updownPointWinscore": -12,
+    "worldCode": "world_asia",
+    "nicknameno": 199070445,
+    "battle_seq": "90798591",
+    "season_code": "pvp_rta_ss21",
+    "season_name": "Fall 2026",
+    "grade_code": "champion",
+    "iswin": 1,
+    "battle_day": "2026-10-29 14:49:06.0",
+    "battle_time": 0,
+    "turn": 0,
+    "my_deck": {
+      "hero_list": [],
+      "preban_list": [
+        "c2185",
+        "c2181"
+      ]
+    },
+    "enemy_deck": {
+      "hero_list": [],
+      "preban_list": [
+        "c2124",
+        "c2185"
+      ]
+    },
+    "enemy_grade_code": "champion",
+    "enemy_hero_code": "c6011",
+    "enemy_nick_no": "ZTheD",
+    "enemy_world_code": "world_eu",
+    "myscore_info": {
+      "win_score": 2300,
+      "up_down_type": 1,
+      "up_down_score": 12
+    },
+    "opening_rule_title": "rta_openingrule_category_1",
+    "opening_rule_desc_tid": "rta_cs_soulburn_dmg_up_desc"
+  },
+  {
+    "langCode": "en",
+    "battleCompletedate": "2026-10-29 23:56:33.0",
+    "teamBettleInfoenemy": "\"my_team\":[]",
+    "teamBettleInfo": "\"my_team\":[]",
+    "prebanListEnemy": "\"preban_list\":[\"c6005\",\"c2124\"]",
+    "prebanList": "\"preban_list\":[\"c2181\",\"c2185\"]",
+    "energyGauge": "\"energy_gauge\":[]",
+    "regDate": "2026-10-30 10:12:34.0",
+    "matchPlayerNicknameno": 337813893,
+    "winScore": 2312,
+    "updownTypeWinscore": 1,
+    "updownPointWinscore": -12,
+    "worldCode": "world_asia",
+    "nicknameno": 199070445,
+    "battle_seq": "90798811",
+    "season_code": "pvp_rta_ss21",
+    "season_name": "Fall 2026",
+    "grade_code": "champion",
+    "iswin": 1,
+    "battle_day": "2026-10-29 14:56:33.0",
+    "battle_time": 0,
+    "turn": 0,
+    "my_deck": {
+      "hero_list": [],
+      "preban_list": [
+        "c2181",
+        "c2185"
+      ]
+    },
+    "enemy_deck": {
+      "hero_list": [],
+      "preban_list": [
+        "c6005",
+        "c2124"
+      ]
+    },
+    "enemy_grade_code": "champion",
+    "enemy_hero_code": "c2124",
+    "enemy_nick_no": "Chibasans",
+    "enemy_world_code": "world_global",
+    "myscore_info": {
+      "win_score": 2312,
+      "up_down_type": 1,
+      "up_down_score": 12
+    },
+    "opening_rule_title": "rta_openingrule_category_1",
+    "opening_rule_desc_tid": "rta_cs_soulburn_dmg_up_desc"
   }
 ]

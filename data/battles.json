@@ -18225,5 +18225,227 @@
     },
     "opening_rule_title": "rta_openingrule_category_1",
     "opening_rule_desc_tid": "rta_cs_soulburn_dmg_up_desc"
+  },
+  {
+    "langCode": "en",
+    "battleCompletedate": "2026-11-01 00:28:08.0",
+    "teamBettleInfoenemy": "\"my_team\":[{\"pick_order\" :1,\"hero_code\":\"c5112\",\"attack_damage\":0,\"receive_damage\":21180.16,\"recovery\":0,\"mvp_point\":21180,\"artifact\":\"efr34\",\"equip\":[\"set_speed\",\"set_chase\"],\"respawn\":0,\"mvp\":1,\"kill_count\":0,\"position\":2,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"ice\",\"level\":60,\"job_cd\":\"ranger\"},{\"pick_order\" :2,\"hero_code\":\"c6024\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"efk01\",\"equip\":[\"set_speed\",\"set_chase\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":3,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"light\",\"level\":60,\"job_cd\":\"knight\"},{\"pick_order\" :3,\"hero_code\":\"c2125\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"efw42\",\"equip\":[\"set_acc\",\"set_speed\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":1,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"warrior\"},{\"pick_order\" :4,\"hero_code\":\"c2076\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":1059,\"artifact\":\"efm03\",\"equip\":[\"set_acc\",\"set_acc\",\"set_acc\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":4,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"mage\"},{\"pick_order\" :5,\"hero_code\":\"c2112\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"\",\"equip\":[],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":0,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"ranger\"}]",
+    "teamBettleInfo": "\"my_team\":[{\"pick_order\" :1,\"hero_code\":\"c2131\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"efa14\",\"equip\":[\"set_speed\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":3,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"assassin\"},{\"pick_order\" :2,\"hero_code\":\"c2007\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":354,\"artifact\":\"efa28\",\"equip\":[\"set_speed\",\"set_torrent\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":2,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"assassin\"},{\"pick_order\" :3,\"hero_code\":\"c1133\",\"attack_damage\":7089,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":11342,\"artifact\":\"efm03\",\"equip\":[\"set_speed\",\"set_penetrate\"],\"respawn\":0,\"mvp\":1,\"kill_count\":0,\"position\":1,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"mage\"},{\"pick_order\" :4,\"hero_code\":\"c1182\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"\",\"equip\":[],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":0,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"fire\",\"level\":60,\"job_cd\":\"manauser\"},{\"pick_order\" :5,\"hero_code\":\"c2127\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":2481,\"artifact\":\"efw14\",\"equip\":[\"set_penetrate\",\"set_cri_dmg\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":4,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"light\",\"level\":60,\"job_cd\":\"warrior\"}]",
+    "prebanListEnemy": "\"preban_list\":[\"c6005\",\"c2186\"]",
+    "prebanList": "\"preban_list\":[\"c2185\",\"c2181\"]",
+    "energyGauge": "\"energy_gauge\":[{\"hero_code\":\"c2112\",\"energy\":0,\"team\":\"2\",\"position_no\":\"5\"},{\"hero_code\":\"c1182\",\"energy\":0,\"team\":\"1\",\"position_no\":\"4\"},{\"hero_code\":\"c2127\",\"energy\":45,\"team\":\"1\",\"position_no\":\"5\"},{\"hero_code\":\"c2076\",\"energy\":62,\"team\":\"2\",\"position_no\":\"4\"},{\"hero_code\":\"c2007\",\"energy\":65,\"team\":\"1\",\"position_no\":\"2\"},{\"hero_code\":\"c6024\",\"energy\":70,\"team\":\"2\",\"position_no\":\"2\"},{\"hero_code\":\"c2131\",\"energy\":78,\"team\":\"1\",\"position_no\":\"1\"},{\"hero_code\":\"c5112\",\"energy\":80,\"team\":\"2\",\"position_no\":\"1\"},{\"hero_code\":\"c2125\",\"energy\":81,\"team\":\"2\",\"position_no\":\"3\"},{\"hero_code\":\"c1133\",\"energy\":100,\"team\":\"1\",\"position_no\":\"3\"}]",
+    "regDate": "2026-11-02 10:15:13.0",
+    "matchPlayerNicknameno": 57443215,
+    "winScore": 2327,
+    "updownTypeWinscore": 1,
+    "updownPointWinscore": -15,
+    "worldCode": "world_asia",
+    "nicknameno": 199070445,
+    "battle_seq": "90904128",
+    "season_code": "pvp_rta_ss21",
+    "season_name": "Fall 2026",
+    "grade_code": "champion",
+    "iswin": 1,
+    "battle_day": "2026-10-31 15:28:08.0",
+    "battle_time": 27,
+    "turn": 2,
+    "my_deck": {
+      "hero_list": [
+        {
+          "hero_code": "c2131",
+          "first_pick": 1,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2007",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c1133",
+          "first_pick": 0,
+          "mvp": 1,
+          "ban": 0
+        },
+        {
+          "hero_code": "c1182",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 1
+        },
+        {
+          "hero_code": "c2127",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        }
+      ],
+      "preban_list": [
+        "c2185",
+        "c2181"
+      ]
+    },
+    "enemy_deck": {
+      "hero_list": [
+        {
+          "hero_code": "c5112",
+          "first_pick": 0,
+          "mvp": 1,
+          "ban": 0
+        },
+        {
+          "hero_code": "c6024",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2125",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2076",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2112",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 1
+        }
+      ],
+      "preban_list": [
+        "c6005",
+        "c2186"
+      ]
+    },
+    "enemy_grade_code": "champion",
+    "enemy_hero_code": "c1126_s01",
+    "enemy_nick_no": "윤명진",
+    "enemy_world_code": "world_kor",
+    "myscore_info": {
+      "win_score": 2327,
+      "up_down_type": 1,
+      "up_down_score": 15
+    },
+    "opening_rule_title": "rta_openingrule_category_4",
+    "opening_rule_desc_tid": "rta_cs_resist_up_50_desc"
+  },
+  {
+    "langCode": "en",
+    "battleCompletedate": "2026-11-01 00:32:51.0",
+    "teamBettleInfoenemy": "\"my_team\":[{\"pick_order\" :1,\"hero_code\":\"c1183\",\"attack_damage\":0,\"receive_damage\":115153.57,\"recovery\":2035,\"mvp_point\":117188,\"artifact\":\"efk25\",\"equip\":[\"set_counter\",\"set_max_hp\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":1,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"wind\",\"level\":60,\"job_cd\":\"knight\"},{\"pick_order\" :2,\"hero_code\":\"c2148\",\"attack_damage\":7243,\"receive_damage\":40778.23,\"recovery\":4304,\"mvp_point\":117554,\"artifact\":\"efm21\",\"equip\":[\"set_chase\",\"set_weak\"],\"respawn\":0,\"mvp\":1,\"kill_count\":0,\"position\":2,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"mage\"},{\"pick_order\" :3,\"hero_code\":\"c1178\",\"attack_damage\":0,\"receive_damage\":54064.99,\"recovery\":0,\"mvp_point\":54064,\"artifact\":\"efw41\",\"equip\":[\"set_opener\",\"set_chase\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":3,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"wind\",\"level\":60,\"job_cd\":\"warrior\"},{\"pick_order\" :4,\"hero_code\":\"c1168\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"\",\"equip\":[],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":0,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"wind\",\"level\":60,\"job_cd\":\"assassin\"},{\"pick_order\" :5,\"hero_code\":\"c2187\",\"attack_damage\":0,\"receive_damage\":37335.24,\"recovery\":0,\"mvp_point\":50380,\"artifact\":\"efa32\",\"equip\":[\"set_speed\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":4,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"light\",\"level\":60,\"job_cd\":\"assassin\"}]",
+    "teamBettleInfo": "\"my_team\":[{\"pick_order\" :1,\"hero_code\":\"c6005\",\"attack_damage\":0,\"receive_damage\":16288.56,\"recovery\":0,\"mvp_point\":51397,\"artifact\":\"efh21\",\"equip\":[\"set_speed\",\"set_immune\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":1,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"light\",\"level\":60,\"job_cd\":\"manauser\"},{\"pick_order\" :2,\"hero_code\":\"c2007\",\"attack_damage\":51238,\"receive_damage\":4647.29,\"recovery\":0,\"mvp_point\":176259,\"artifact\":\"efa28\",\"equip\":[\"set_speed\",\"set_torrent\"],\"respawn\":0,\"mvp\":1,\"kill_count\":4,\"position\":2,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"dark\",\"level\":60,\"job_cd\":\"assassin\"},{\"pick_order\" :3,\"hero_code\":\"c2046\",\"attack_damage\":4654,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":114997,\"artifact\":\"efr13\",\"equip\":[\"set_speed\",\"set_acc\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":3,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"light\",\"level\":60,\"job_cd\":\"ranger\"},{\"pick_order\" :4,\"hero_code\":\"c5112\",\"attack_damage\":23484,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":33515,\"artifact\":\"efr34\",\"equip\":[\"set_speed\",\"set_chase\"],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":4,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"ice\",\"level\":60,\"job_cd\":\"ranger\"},{\"pick_order\" :5,\"hero_code\":\"c5033\",\"attack_damage\":0,\"receive_damage\":0.0,\"recovery\":0,\"mvp_point\":0,\"artifact\":\"\",\"equip\":[],\"respawn\":0,\"mvp\":0,\"kill_count\":0,\"position\":0,\"grade\":6,\"awaken_grade\":6,\"attribute_cd\":\"ice\",\"level\":60,\"job_cd\":\"assassin\"}]",
+    "prebanListEnemy": "\"preban_list\":[\"c2185\",\"c2186\"]",
+    "prebanList": "\"preban_list\":[\"c2185\",\"c2181\"]",
+    "energyGauge": "\"energy_gauge\":[{\"hero_code\":\"c5033\",\"energy\":0,\"team\":\"1\",\"position_no\":\"5\"},{\"hero_code\":\"c1168\",\"energy\":0,\"team\":\"2\",\"position_no\":\"4\"},{\"hero_code\":\"c1183\",\"energy\":37,\"team\":\"2\",\"position_no\":\"1\"},{\"hero_code\":\"c1178\",\"energy\":65,\"team\":\"2\",\"position_no\":\"3\"},{\"hero_code\":\"c2007\",\"energy\":72,\"team\":\"1\",\"position_no\":\"2\"},{\"hero_code\":\"c2148\",\"energy\":82,\"team\":\"2\",\"position_no\":\"2\"},{\"hero_code\":\"c5112\",\"energy\":84,\"team\":\"1\",\"position_no\":\"4\"},{\"hero_code\":\"c6005\",\"energy\":87,\"team\":\"1\",\"position_no\":\"1\"},{\"hero_code\":\"c2187\",\"energy\":98,\"team\":\"2\",\"position_no\":\"5\"},{\"hero_code\":\"c2046\",\"energy\":100,\"team\":\"1\",\"position_no\":\"3\"}]",
+    "regDate": "2026-11-02 10:15:13.0",
+    "matchPlayerNicknameno": 188379544,
+    "winScore": 2340,
+    "updownTypeWinscore": 1,
+    "updownPointWinscore": -13,
+    "worldCode": "world_asia",
+    "nicknameno": 199070445,
+    "battle_seq": "90904326",
+    "season_code": "pvp_rta_ss21",
+    "season_name": "Fall 2026",
+    "grade_code": "champion",
+    "iswin": 1,
+    "battle_day": "2026-10-31 15:32:51.0",
+    "battle_time": 71,
+    "turn": 7,
+    "my_deck": {
+      "hero_list": [
+        {
+          "hero_code": "c6005",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2007",
+          "first_pick": 0,
+          "mvp": 1,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2046",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c5112",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c5033",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 1
+        }
+      ],
+      "preban_list": [
+        "c2185",
+        "c2181"
+      ]
+    },
+    "enemy_deck": {
+      "hero_list": [
+        {
+          "hero_code": "c1183",
+          "first_pick": 1,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c2148",
+          "first_pick": 0,
+          "mvp": 1,
+          "ban": 0
+        },
+        {
+          "hero_code": "c1178",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        },
+        {
+          "hero_code": "c1168",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 1
+        },
+        {
+          "hero_code": "c2187",
+          "first_pick": 0,
+          "mvp": 0,
+          "ban": 0
+        }
+      ],
+      "preban_list": [
+        "c2185",
+        "c2186"
+      ]
+    },
+    "enemy_grade_code": "champion",
+    "enemy_hero_code": "c6024",
+    "enemy_nick_no": "EndOblivion",
+    "enemy_world_code": "world_asia",
+    "myscore_info": {
+      "win_score": 2340,
+      "up_down_type": 1,
+      "up_down_score": 13
+    },
+    "opening_rule_title": "rta_openingrule_category_6",
+    "opening_rule_desc_tid": "rta_cs_dodge_down_desc"
   }
 ]
